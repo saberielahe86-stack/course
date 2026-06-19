@@ -25,7 +25,7 @@ jobs:
         with:
           enable-cache: true
           cache-dependency-glob: "pyproject.toml"
-      - run: uv python install 3.13
+      - run: uv python install 3.13.13
       - run: uv sync
       - run: cd airbnb && uv run dbt deps --profiles-dir _prod_profiles --target prod
       - run: cd airbnb && uv run dbt build --profiles-dir _prod_profiles --target prod
