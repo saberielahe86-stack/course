@@ -5,26 +5,26 @@ FROM mcr.microsoft.com/devcontainers/python:3.13-bullseye
 LABEL org.opencontainers.image.source=https://github.com/nordquant/complete-dbt-bootcamp-zero-to-hero
 LABEL org.opencontainers.image.description="dbt Zero to Hero Development Container"
 
-# Install UV as root into /usr/local/bin
-ENV UV_INSTALL_DIR="/usr/local/bin"
+# uv configuration:
+# - Install the uv CLI to /usr/local/bin (root-owned, on PATH for all users).
+# - Treat /opt/venv as the project environment so `uv sync` / `uv add` / `uv run`
+#   manage that one location, owned by vscode. Avoids a recursive chown of
+#   /usr/local (which would duplicate ~3 GB of git-core etc. into a new layer).
+# - Put /opt/venv/bin on PATH so installed entry points (dbt, dagster-dbt,
+#   dagster-webserver, ...) are visible to every shell, including VSCode terminals.
+ENV UV_INSTALL_DIR=/usr/local/bin \
+    UV_PROJECT_ENVIRONMENT=/opt/venv \
+    PATH=/opt/venv/bin:$PATH
+
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
-    && chmod a+rx /usr/local/bin/uv /usr/local/bin/uvx
+ && chmod a+rx /usr/local/bin/uv /usr/local/bin/uvx \
+ && install -d -o vscode -g vscode /opt/venv \
+ && printf 'export PATH="/opt/venv/bin:$PATH"\n' > /etc/profile.d/zz-uv-venv.sh
 
-# Tell UV to use system Python (no virtualenv) and treat /usr/local as the
-# project environment so `uv sync` / `uv add` / `uv run` from any shell
-# reuse the prebuilt site-packages instead of creating .venv/ in the workspace.
-ENV UV_SYSTEM_PYTHON=1
-ENV UV_PROJECT_ENVIRONMENT=/usr/local
-
-# Copy project files and install dependencies as root, using the lock so the
-# baked-in install matches what `uv sync --frozen` expects at runtime.
-COPY pyproject.toml uv.lock /workspaces/dev-repo/
+# Install project deps as vscode into /opt/venv from the lockfile, so the
+# baked-in install matches what `uv sync --frozen` expects at runtime
+# (postCreate becomes a true no-op when the lock hasn't drifted).
+COPY --chown=vscode:vscode pyproject.toml uv.lock /workspaces/dev-repo/
+USER vscode
 WORKDIR /workspaces/dev-repo
 RUN uv sync --frozen --no-install-project
-
-# Grant vscode user write access to the entire /usr/local tree — uv treats it
-# as the project env, so it writes to bin/, lib/, share/, include/ etc.
-RUN chown -R vscode:vscode /usr/local
-
-# Switch to vscode user for runtime
-USER vscode

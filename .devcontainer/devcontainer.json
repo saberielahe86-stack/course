@@ -8,7 +8,7 @@
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"python.defaultInterpreterPath": "/usr/local/bin/python3",
+				"python.defaultInterpreterPath": "/opt/venv/bin/python",
 				"extensions.ignoreRecommendations": true,
 				"settingsSync.enabled": false,
 				"python.terminal.useEnvFile": false
