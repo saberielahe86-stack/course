@@ -42,3 +42,66 @@ Runtime Error
 [0m18:40:03.987464 [debug] [MainThread]: Flushing usage events
 [0m18:40:04.681947 [debug] [MainThread]: An error was encountered while trying to flush usage events
 ==================== 2026-06-21T17:46:15.237690Z | 019eeb4a-4b42-7013-978d-ebe59caf16cd ====================
+[0m23:49:59.058401 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 23:49:59.250995 | bdd554cd-1e7f-469e-807e-d50d1e2a5488 ==============================
+[0m23:49:59.250995 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:49:59.252367 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\saber\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt init airstats', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:49:59.323822 [debug] [MainThread]: Starter project path: C:\Users\saber\Desktop\course\.venv\Lib\site-packages\dbt\include\starter_project
+[0m23:49:59.472286 [info ] [MainThread]: 
+Your new dbt project "airstats" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:49:59.474106 [info ] [MainThread]: Setting up your profile.
+[0m23:50:44.855537 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m23:50:44.856219 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m23:50:44.856608 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m23:52:27.487353 [error] [MainThread]: Encountered an error:
+
+[0m23:52:27.618230 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\dbt\cli\main.py", line 483, in init
+    results = task.run()
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\dbt\task\init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\dbt\task\init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\dbt\task\init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\dbt\task\init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\dbt\task\init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\click\termui.py", line 171, in prompt
+    value = prompt_func(prompt)
+  File "C:\Users\saber\Desktop\course\.venv\Lib\site-packages\click\termui.py", line 154, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m23:52:27.621853 [debug] [MainThread]: Command `dbt init` failed at 23:52:27.621503 after 148.68 seconds
+[0m23:52:27.622889 [debug] [MainThread]: Flushing usage events
