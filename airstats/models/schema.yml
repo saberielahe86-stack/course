@@ -34,9 +34,20 @@ models:
         tests:
           - unique
       - name: airport_ident
+        data_type: text
         tests:
           - not_null
           - relationships:
               arguments:
                 to: ref('silver_airports')
                 field: airport_ident
+      - name: runway_closed
+        data_type: number
+      - name: runway_length_ft
+        data_type: number 
+      - name: runway_lighted
+        data_type: number
+      - name: runway_surface
+        data_type: text
+      - name: runway_width_ft
+        data_type: number
