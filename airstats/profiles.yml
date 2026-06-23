@@ -1,4 +1,4 @@
-airbnb:
+airstats:
   outputs:
     dev:
       type: snowflake
