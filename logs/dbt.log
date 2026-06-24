@@ -105,3 +105,39 @@ click.exceptions.Abort
 
 [0m23:52:27.621853 [debug] [MainThread]: Command `dbt init` failed at 23:52:27.621503 after 148.68 seconds
 [0m23:52:27.622889 [debug] [MainThread]: Flushing usage events
+[0m23:07:07.356950 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 23:07:07.508892 | 7da8fb50-cc1a-4ec7-b124-639739c92e65 ==============================
+[0m23:07:07.508892 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:07:07.511267 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\saber\\.dbt', 'invocation_command': 'dbt compile --models legacy_int_host_performance', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:07:07.511819 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m23:07:07.512974 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\saber\Desktop\course\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:07:07.513834 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m23:07:07.515360 [debug] [MainThread]: Command `dbt compile` failed at 23:07:07.515178 after 0.25 seconds
+[0m23:07:07.515801 [debug] [MainThread]: Flushing usage events
+[0m23:07:17.245280 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 23:07:17.437718 | cda646cb-8027-4e05-98d1-ba941ee5a62b ==============================
+[0m23:07:17.437718 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:07:17.439228 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\saber\\.dbt', 'invocation_command': 'dbt compile --select legacy_int_host_performance', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:07:17.439934 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\saber\Desktop\course\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:07:17.441487 [debug] [MainThread]: Command `dbt compile` failed at 23:07:17.441318 after 0.29 seconds
+[0m23:07:17.441892 [debug] [MainThread]: Flushing usage events
