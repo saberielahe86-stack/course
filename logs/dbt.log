@@ -141,3 +141,55 @@ Runtime Error
   
 [0m23:07:17.441487 [debug] [MainThread]: Command `dbt compile` failed at 23:07:17.441318 after 0.29 seconds
 [0m23:07:17.441892 [debug] [MainThread]: Flushing usage events
+[0m00:11:34.164195 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 00:11:34.289349 | 40422445-1364-484e-b5cd-c018cedb9f38 ==============================
+[0m00:11:34.289349 [info ] [MainThread]: Running with dbt=1.11.11
+[0m00:11:34.290308 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\saber\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt deps', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:11:34.290935 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\saber\Desktop\course\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:11:34.291714 [debug] [MainThread]: Command `dbt deps` failed at 00:11:34.291605 after 0.18 seconds
+[0m00:11:34.291945 [debug] [MainThread]: Flushing usage events
+[0m00:19:58.279927 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 00:19:58.396364 | aa009095-1796-4262-8907-61b99c1fccec ==============================
+[0m00:19:58.396364 [info ] [MainThread]: Running with dbt=1.11.11
+[0m00:19:58.397967 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\saber\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt deps', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:19:58.399082 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\saber\Desktop\course\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:19:58.400909 [debug] [MainThread]: Command `dbt deps` failed at 00:19:58.400625 after 0.17 seconds
+[0m00:19:58.401572 [debug] [MainThread]: Flushing usage events
+[0m00:20:16.119586 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 00:20:16.221036 | 1b0a4cf2-c963-442c-8d3b-cbc0eb7ad83e ==============================
+[0m00:20:16.221036 [info ] [MainThread]: Running with dbt=1.11.11
+[0m00:20:16.222648 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\saber\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt clean', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:20:16.223974 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\saber\Desktop\course\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:20:16.225698 [debug] [MainThread]: Command `dbt clean` failed at 00:20:16.225443 after 0.15 seconds
+[0m00:20:16.226316 [debug] [MainThread]: Flushing usage events
+[0m00:23:14.645255 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 00:23:14.798965 | f07582c2-2e8a-469d-a458-32fb864538ac ==============================
+[0m00:23:14.798965 [info ] [MainThread]: Running with dbt=1.11.11
+[0m00:23:14.800710 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\saber\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt deps', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:23:14.802252 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\saber\Desktop\course\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m00:23:14.804197 [debug] [MainThread]: Command `dbt deps` failed at 00:23:14.803920 after 0.21 seconds
+[0m00:23:14.804861 [debug] [MainThread]: Flushing usage events
