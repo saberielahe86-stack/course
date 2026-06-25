@@ -1,6 +1,8 @@
 airbnb/profiles.yml
 airbnb/target*/
 logs/
+node_modules/
+.altimate/
 
 airbnb/package-lock.yml
 airbnb/dbt_packages/
@@ -15,3 +17,8 @@ airbnb/dbt_internal_packages/
 set-env.sh
 set-env.ps1
 
+# Altimate Datamates skill files (auto-generated)
+.github/instructions/datamate/
+.github/instructions/snowflake/
+.github/instructions/general-awareness.instructions.md
+.github/instructions/.managed-skills.json
